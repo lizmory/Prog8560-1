@@ -1,0 +1,102 @@
+.huge{
+    height: 2000px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 1000px;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+.header-grid{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-gap: 30px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 20px 30px;
+    display: inline-block;
+}
+
+nav ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+nav ul ul{
+    position: absolute;
+    padding: 0;
+    display: none;
+}
+nav ul li:hover ul{
+    display: block
+}
+
+nav ul ul li{
+    display: block;
+}
+nav ul ul li a{
+    background-color: black;
+    color: white;
+    display: block;
+}
+
+.parallax{
+    background-image: url('../images/parallax.jpg');
+    color: white;
+    font-size: 36px;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    padding: 100px;
+}
+.text-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin: 50px 0;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-grid{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.copyright{
+    padding: 10px 0 0 0;
+    text-align: center;
+    font-size: 14px;
+}
