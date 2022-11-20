@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/meta.ejs') %> 
+  <title>Home</title>
+</head>
+<body>
+  <%- include('partials/nav.ejs') %>
+  <main>
+    <h1>Edit the Halloween ID</h1>
+    <form action="/editprocess/<%= _id %>" method="POST" enctype="multipart/form-data">
+      <div class="wrapper">
+        <label for="scaryName">Scary Name</label>
+        <input type="text" id="scaryName" name="scaryName" value="<%= scaryName %>">
+      </div>
+      <div class="wrapper">
+        <label for="scaryEmail">Scary Email</label>
+        <input type="text" id="scaryEmail" name="scaryEmail" value="<%= scaryEmail %>" >
+      </div>
+      <div class="wrapper">
+        <label for="scaryDescription">Scary Description</label>
+        <input type="text" id="scaryDescription" name="scaryDescription" 
+        value="<%= scaryDescription %>">
+      </div>
+      <div class="wrapper">
+        <label for="scaryImage">Scary Image</label>
+        <img style="width: 50px;" src="/uploads/<%= scaryImageName %>" alt="Photo">
+        <input type="file" id="scaryImage" name="scaryImage">
+      </div>
+      <div class="submission">
+        <input type="submit" value="Generate Scary ID!">
+      </div>
+    </form>
+
+  </main>
+  
+  <%- include('partials/footer.ejs') %> 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/js/tinymce/tinymce.min.js"></script>
+  <script>
+      tinymce.init({
+        selector: '#scaryDescription'
+      });
+  </script>
+</body>
+</html>
